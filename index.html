@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      if (typeof global === "undefined") {
+        global = window;
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App ClipClip</title>
+    <base href="/" />
+    <style>
+      @font-face {
+        font-family: "Gilroy";
+        src: url("https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.eot");
+        src:
+          local("Gilroy Extrabold"),
+          local("Gilroy-Extrabold"),
+          url("https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.woff")
+            format("woff"),
+          url("https://cdn.jsdelivr.net/gh/repalash/gilroy-free-webfont@fonts/Gilroy-Extrabold.ttf")
+            format("truetype");
+        font-weight: 800;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Icons";
+        src: url("/assets/Segoe-Fluent-Icons-DZBuTvqn.woff2") format("woff2");
+      }
+      :root {
+        --corners-medium: 4px;
+        --error-500: #df434b;
+
+        --gap-xxxsmall: 2px;
+        --gap-xxsmall: 4px;
+        --gap-xsmall: 6px;
+
+        --light-background-primary: #fdfdfd;
+        --light-background-secondary: #f4f5f6;
+        --light-background-textbox-accent: rgba(40, 93, 243, 1);
+        --light-background-textbox-input: rgba(253, 253, 253, 1);
+        --light-background-textbox-button: rgba(244, 245, 246, 0);
+        --light-border-avatar: #fdfdfd;
+        --light-background-avatar: #e1e3e6;
+
+        --light-content-switch-thumbActive: #f4f5f6;
+
+        --light-content-primary: #15171a;
+        --light-content-checkbox-activeResting: rgba(244, 245, 246, 1);
+        --light-background-radio-selectedResting: rgba(40, 93, 243, 1);
+        --light-border-textbox-normal: rgba(8, 19, 49, 0.1);
+
+        --cc-spc-075: 12px;
+        --cc-spc-100: 16px;
+        --cc-spc-150: 24px;
+        --cc-spc-200: 32px;
+
+        --light-content-listitem-primary: #15171a;
+        --light-background-listitem-resting: rgba(244, 245, 246, 0);
+        --light-background-listitem-pressed: rgba(8, 19, 49, 0.1);
+        --light-background-listitem-selector: rgba(40, 93, 243, 1);
+        --light-background-listitem-hover: rgba(8, 19, 49, 0.05);
+        --light-background-listitem-selector: rgba(40, 93, 243, 1);
+        --light-content-listitem-secondary: rgba(107, 113, 131, 1);
+
+        --light-border-separator: rgba(8, 19, 49, 0.1);
+
+        --corners-medium: 4px;
+
+        --padding-xxsmall: 10px;
+        --padding-small: 24px;
+
+        --light-background-button-primary-active: #285df3;
+        --light-background-button-tertiary-active: rgba(244, 245, 246, 0.05);
+        --light-background-button-secondary-active: rgba(253, 253, 253, 1);
+        --light-content-button-primary-active: #f4f5f6;
+        --light-content-button-secondary-active: #285df3;
+        --light-content-button-tertiary-active: rgba(21, 23, 26, 1);
+
+        --light-border-button-secondary-active: rgba(40, 93, 243, 0.2);
+
+        --tints-and-shades-primary-hue-light-80: rgba(40, 93, 243, 0.8);
+        --tints-and-shades-primary-hue-light-90: rgba(40, 93, 243, 0.9);
+
+        --dark-content-secondary: #898d9c;
+        --light-border-separator: #0813311a;
+      }
+      #root {
+        /* margin: 0 auto; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: left;
+        height: 100%;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        font-size: 14px;
+        background: var(--light-background-secondary);
+        color: var(--light-content-primary);
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+      }
+      input,
+      textarea,
+      select {
+        font-family: "Segoe UI Variable Static Display";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+      }
+      a {
+        color: var(--light-content-accent, rgba(40, 93, 243, 1));
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://clipclip.com/favicon.ico"
+    />
+    <script
+      type="module"
+      crossorigin=""
+      src="/assets/index-m70NE2fU.js"
+    ></script>
+    <link
+      rel="modulepreload"
+      crossorigin=""
+      href="/assets/vendor-CX_j2C6k.js"
+    />
+    <link rel="stylesheet" crossorigin="" href="/assets/index-69bS4-e1.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
